@@ -1668,8 +1668,8 @@
             <ThinkingView>1</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>2</StartingRoom>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>798</StartX>
+            <StartY>737</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
@@ -1882,6 +1882,7 @@ return
 goto-dialog 61
 @2
 butler: "Right then. Enjoy your night!"
+	cButler.ChangeRoom(1);
 stop
 @3
 goto-dialog 62
@@ -1923,7 +1924,7 @@ butler: "Maybe it's all the kale she keeps eating."
 return
 @2
 option-off 2
-butler: "Our guest is quite out of this world...though don't say that to her. Let's just say her er...alien nature has not gone unnoticed by most and she'd rather not discuss it in casual conversation."
+butler: "Our guest is quite out of this world... though don't say that to her. Let's just say her er... alien nature has not gone unnoticed by most and she'd rather not discuss it in casual conversation."
 butler: "And, please, do not mention the horns!"
 	checkIfButlerIsOn();
 return
@@ -1952,6 +1953,7 @@ butler: "You... want to know more about me? Moi?"
 butler: "I am sorry... it's just that no one's ever asked me about myself before - not once in the three decades I've spent slaving away for a master that's not even home to entertain his own guests."
 butler: "I am... well... my name is Burt. I work for Master Wruce. And... I should really get to work now. I would love to talk to you some more after this grand gala is over... should you want to."
 butler: "Farewell."
+	cButler.ChangeRoom(1);
 stop
 ]]></Script>
                 <DialogOptions>
@@ -2006,10 +2008,12 @@ return
 butler: "It's quite alright..."
 butler: "I am accustomed to this treatment."
 butler: "Enjoy the party!"
+	cButler.ChangeRoom(1);
 stop
 @2
 butler: "(murmuring) Why I never..."
 butler: "Have a jolly good time!"
+	cButler.ChangeRoom(1);
 stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
@@ -2036,6 +2040,7 @@ butler: "Are you certain? No queries about this mansion or the many colorful cha
 return
 @1
 butler: "Right then. Enjoy your night!"
+	cButler.ChangeRoom(1);
 stop
 @2
 goto-dialog 62
@@ -2211,7 +2216,7 @@ goto-dialog 9]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-guard2: "..."
+guard2: "....."
 guard2: "Club Sauce."
 guard1: "Don't be rude. Club Sauce, welcome to the party!"
 guard1: "Oh, I'm sorry, you're not on the list."
@@ -2248,7 +2253,7 @@ guard1: "Er, better luck next time, buddy!"
 guard2: "He's not your... hey, please step back and make room for attending guests."
 	player.Think("Crap! I'll need to think of something else.");
 	player.Think("My brilliant disguise didn't work. All I have is this Super Victory Card.");
-	player.Think("...");
+	player.Think(".....");
 	player.Think("oh");
 return
 @1
@@ -2419,7 +2424,7 @@ goto-dialog 12]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-ego: "..."
+ego: "....."
 return
 @1
 goto-dialog 18
@@ -2454,7 +2459,7 @@ goto-dialog 22]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-ego: "..."
+ego: "....."
 return
 @1
 option-off 1
@@ -2865,7 +2870,7 @@ goto-dialog 28
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text>...</Text>
+                    <Text>.....</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2884,7 +2889,7 @@ goto-dialog 28
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(2, 1);
-evil: "..."
+evil: "....."
 return
 @1
 goto-dialog 27
@@ -2894,7 +2899,7 @@ goto-dialog 28
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text>...</Text>
+                    <Text>.....</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2930,7 +2935,7 @@ goto-dialog 31
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text>...</Text>
+                    <Text>.....</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3002,7 +3007,7 @@ goto-dialog 31
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text>....</Text>
+                    <Text>.....</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3093,10 +3098,13 @@ evil: "But alas, I must be off! To do good! In good places!"
 evil: "Farewell!!"
 return
 @1
+	cEvil.ChangeRoom(1);
 stop
 @2
+	cEvil.ChangeRoom(1);
 stop
 @3
+	cEvil.ChangeRoom(1);
 stop
 ]]></Script>
                 <DialogOptions>
@@ -3108,7 +3116,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text>....</Text>
+                    <Text>.....</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3166,7 +3174,7 @@ goto-dialog 36
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text>....</Text>
+                    <Text>.....</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3218,7 +3226,7 @@ goto-dialog 33
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text>....</Text>
+                    <Text>.....</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3574,10 +3582,12 @@ return
 @1
 	modifyscore(3,1);
 strong: "Who knows, maybe we'll run into each other again."
+	cStrong.ChangeRoom(1);
 stop
 @2
 	modifyscore(3,-1);
 strong: "Mmm. Enjoy the party."
+	cStrong.ChangeRoom(1);
 stop
 
 ]]></Script>
@@ -3609,10 +3619,12 @@ return
 @1
 	modifyscore(3,1);
 strong: "Who knows, maybe we'll run into each other again."
+	cStrong.ChangeRoom(1);
 stop
 @2
 	modifyscore(3,-1);
 strong: "Mmm. Enjoy the party."
+	cStrong.ChangeRoom(1);
 stop
 ]]></Script>
                 <DialogOptions>
@@ -3643,10 +3655,12 @@ return
 @1
 	modifyscore(3,1);
 strong: "Who knows, maybe we'll run into each other again."
+	cStrong.ChangeRoom(1);
 stop
 @2
 	modifyscore(3,-1);
 strong: "Mmm. Enjoy the party."
+	cStrong.ChangeRoom(1);
 stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
@@ -4144,7 +4158,7 @@ goto-dialog 52
 @S  // Dialog startup entry point
 ego: "Hey there!"
 narrator: "The person doesn't reply."
-ego: "..."
+ego: "....."
 return
 @1
 goto-dialog 76
@@ -4352,9 +4366,11 @@ goto-dialog 69
 return
 @1
 	modifyscore(4,1);
+	cShy.ChangeRoom(1);
 stop
 @2
 	modifyscore(4,-1);
+	cShy.ChangeRoom(1);
 stop
 ]]></Script>
                 <DialogOptions>
@@ -4383,9 +4399,11 @@ shy: "I think I just need to decompress for a little. But maybe I'll catch up wi
 return
 @1
 	modifyscore(4,1);
+	cShy.ChangeRoom(1);
 stop
 @2
 	modifyscore(4,-1);
+	cShy.ChangeRoom(1);
 stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
@@ -4412,9 +4430,11 @@ shy: "Oh uh...no, no thank you. I'm good."
 return
 @1
 	modifyscore(4,1);
+	cShy.ChangeRoom(1);
 stop
 @2
 	modifyscore(4,-1);
+	cShy.ChangeRoom(1);
 stop
 ]]></Script>
                 <DialogOptions>
@@ -4541,11 +4561,11 @@ goto-dialog 67
 	modifyscore(4,1);
 	shyDialogAprovalCheck();
 stop
-@2
+@3
 	modifyscore(4,-1);
 shy: "Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me."
 goto-dialog 69
-@3
+@4
 	modifyscore(4,-1);
 shy: "I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?"
 goto-dialog 69
@@ -4594,11 +4614,11 @@ goto-dialog 67
 	modifyscore(4,1);
 	shyDialogAprovalCheck();
 stop
-@2
+@3
 	modifyscore(4,-1);
 shy: "Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me."
 goto-dialog 69
-@3
+@4
 	modifyscore(4,-1);
 shy: "I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?"
 goto-dialog 69
@@ -4768,9 +4788,402 @@ goto-dialog 75
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+ego: "Hello!"
+alien: "Hello. My name is Nightbolt."
 return
+@1
+goto-dialog 80
+@2
+goto-dialog 83
+@3
+goto-dialog 87
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Are those horns real, or are they part of your costume?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">So... you're here 'cause you're pretty horny, huh?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">So, are you on a team with Wruce?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>80</ID>
+                <Name>dDialog65</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,-1);
+alien: "Excuse me? Not everyone looks the same, you know."
+return
+@1
+goto-dialog 81
+@2
+goto-dialog 82
+@3
+	modifyscore(5,-1);
+alien: "Yeah... bye."
+	cAlien.ChangeRoom(1);
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I'd love to see more of you…if you know what I mean…</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Oh I'm sorry! I was wondering because I think they’re really cool. Much nicer than anything on my face</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">Um…okay…I was just asking…</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>81</ID>
+                <Name>dDialog66</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,-1);
+alien: "Ugh, you think you’re really clever, don’t you asshole? I don’t want to talk to you anymore."
+	cAlien.ChangeRoom(1);
+stop
 ]]></Script>
                 <DialogOptions />
+              </Dialog>
+              <Dialog>
+                <ID>82</ID>
+                <Name>dDialog67</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,1);
+alien: "Thanks. And your face isn't terrible; all Earth people are plain like that."
+ego: "So you’re not from Earth. What planet are you from?"
+	modifyscore(5,1);
+alien: "I'm from the planet Stredater."
+return
+@1
+goto-dialog 85
+@2
+goto-dialog 81
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">That’s so cool! I’d love to hear more about it!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">No wonder your looks are so out of this world.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>83</ID>
+                <Name>dDialog68</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,-1);
+alien: "Wow, real creative, asshole."
+return
+@1
+	modifyscore(5,-2);
+alien: "Ugh, you think you’re really clever, don’t you asshole? I don’t want to talk to you anymore."
+	cAlien.ChangeRoom(1);
+stop
+@2
+goto-dialog 84
+@3
+goto-dialog 86
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Well, do you like assholes?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">I'm sorry. That was a bad line.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">Well... it's just... you have horns.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>84</ID>
+                <Name>dDialog69</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,1);
+alien: "Well at least you apologized."
+return
+@1
+goto-dialog 85
+@2
+goto-dialog 81
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Let me make it up to you?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">cheesy line</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>85</ID>
+                <Name>dDialog70</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,1);
+alien: "Sure. Maybe we can meet up later and you could get me a coffee?"
+	cAlien.ChangeRoom(1);
+stop
+]]></Script>
+                <DialogOptions />
+              </Dialog>
+              <Dialog>
+                <ID>86</ID>
+                <Name>dDialog71</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,-1);
+alien: "Yeah, well, not everyone looks the same, you know."
+return
+@1
+goto-dialog 84
+@2
+goto-dialog 81
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I'm sorry. You're right, it was rude of me to say that.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">"I'd love to see more of you... if you know what I mean...</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>87</ID>
+                <Name>dDialog72</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,1);
+alien: "No, but we’ve run into each other a few times. They know I don’t have very many friends on this planet, so they invited me."
+return
+@1
+goto-dialog 88
+@2
+	modifyscore(5,2);
+alien: "Wow thanks! I'm having a great time talking to you too, would you maybe want to get together later?"
+@3
+goto-dialog 89
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">So what planet are you from?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Well I'm glad they did. I'm having a great time talking to you!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">I bet running into you is a lot of fun.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>88</ID>
+                <Name>dDialog73</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+alien: "I'm from the planet Stredater."
+return
+@1
+goto-dialog 85
+@2
+goto-dialog 81
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">That's so cool! I'd love to hear more about it!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">No wonder your looks are so out of this world.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>89</ID>
+                <Name>dDialog74</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,-1);
+alien: "Ugh. Really? A pickup line?"
+return
+@1
+goto-dialog 81
+@2
+goto-dialog 90
+@3
+goto-dialog 91
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">No wonder your looks are so out of this world.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">You're right. It was bad.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">Did you not think it was PUNny?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>90</ID>
+                <Name>dDialog75</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,1);
+alien: "At least you're aware of it."
+return
+@1
+	modifyscore(5,1);
+alien: "No, it hasn’t. Maybe we could meet up later and you could get me a coffee?"
+	cAlien.ChangeRoom(1);
+stop
+@2
+	modifyscore(5,-1);
+alien: "Wow, that one was even worse. I think this conversation is over."
+	cAlien.ChangeRoom(1);
+stop
+	]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I hope this hasn't ruined my chances of talking to you more.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">So... does this mean you're picked up?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>91</ID>
+                <Name>dDialog76</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+	modifyscore(5,-1);
+alien: "I didn’t, actually."
+return
+@1
+goto-dialog 85
+@2
+	modifyscore(5,-1);
+alien: "They do. I don't like them there either. I don't think this is a good match."
+	cAlien.ChangeRoom(1);
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I'm sorry. Will you let me redeem myself?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Do they not have puns on your planet?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
               </Dialog>
             </Dialogs>
           </DialogFolder>
