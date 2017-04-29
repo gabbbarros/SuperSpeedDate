@@ -1911,11 +1911,11 @@
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 butler: Esteemed guest!
-butler: Welcome to Wruce Bayne's grand gala in honor of our superpowered saviours. My name is Bart Larz, majordromo of Bayne Manor. 
-butler: Please, stay awhile - enjoy drinks courtesy of Bayne Incorporated. While Master Wruce enjoys a good social mingling from time to time, there is a limit to how long he'd be comfortable with this party lasting.
-butler: As you can see from the clock to your left, it is 8:00. The party will end at midnight!
-butler: Make haste in breaking the ice with your fellow Super Heroes. You may not have the time to speak to them all after all. Guests are required to vacate the premise at midnight!
-player: Alright! Thanks for the info!
+butler: Welcome to the Superhero Speed Date, hosted in Wruce Bayne's grand gala to honor our super-powered saviors! I'm Bart Larz, the majordomo of Bayne Manor. 
+butler: Enjoy drinks and light snacks courtesy of Bayne Incorporated. Master Bayne will not be joining us tonight, as he does not require dating help. Not that..you...do. Ahem.
+butler: As you can see on the clock to your left, it is now 8 p.m. The party will last until midnight. This is a speed date, after all.
+butler: We feel speed dating creates a pleasant sense of urgency, but you must be cautious. You may not have time to speak to every guest. Choose wisely.
+player: Okay, thank you.
 stop
 ]]></Script>
                     <DialogOptions />
@@ -1931,17 +1931,17 @@ stop
                     <ShowTextParser>False</ShowTextParser>
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: The guests have been vacated, the dishes have been cleaned, and Master Wruce's privacy has been restored!
-butler: Hmm. 'tis bittersweet though I suppose. I have naught else to do to keep myself busy for the rest of the night - that is, unless you'd like to keep me occupied.
-butler: I may be a mild-mannder, servile, caretaker under Master Wruce's watchful eyes. But make no mistake, I still "know my way around town." So what say you?
+butler: The guests have vacated, the dishes are cleaned, and Master Wruce's privacy has been restored!
+butler: Hmm. It is bittersweet, I suppose. I have naught else to do to keep myself busy. That is, unless you'd like to keep me occupied.
+butler: I may be a mild-manndered, servile caretaker under Master Wruce's watchful eye. But make no mistake, I still "know my way around town." So, what say you?
 return
 @1
-//we didn't have anything in this node??
-narrator: You and Burt, the Butler, leave to enjoy the night.
+//we didn't have anything in this node?? 
+narrator: You and Burt leave, ready to enjoy the night and the town.
 goto-dialog 101
 @2
-butler: Very well then. I hope you have an amazing night. 
-butler: As for me....THIS OLD FUCKER'S GONNA RIP UP THE STREETS! YEEEHAW!!!
+butler: Very well, then. I hope your night is one of elegance and decorum. 
+butler: Not that I will be following suit, of course. My night will be one of tearing. Up. This. Town.
 	cButler.ChangeRoom(1);
 stop
 ]]></Script>
@@ -1970,7 +1970,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: 'Tis almost midnight! You had better make best use of how you spend the reminder of your time at this party. The doors of Bayne Manor are going to shut soon. Did you have any last minute questions?
+butler: 'Tis almost midnight! Your time draws short, and soon you will be firmly but gently booted out the door. Is there anything of which you are unclear?
 goto-dialog 97]]></Script>
                 <DialogOptions />
               </Dialog>
@@ -1980,15 +1980,15 @@ goto-dialog 97]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: Hah - a sense of humour! You will have no trouble fitting in!
-butler: And no, this mansion is not now, nor has it ever been the secret hideout of Nightrodent - a costumed vigilante not in anyway affiliated with Wruce Bayne or Bayne incorporated.
-butler: It is merely what it seems like - an early 18th century manor house that so happens to be built on top of an unusually intricate cave formation.
+butler: Hah, a sense of humor! You will have no trouble fitting in.
+butler: And no, this mansion is not now, nor has it ever been, the secret hideout of Nightrodent: the rugged vigilante not in any way affiliated with Wruce Bayne or Bayne Incorporated.
+butler: It is simply an early 18th-century manor house built on top of an unusually intricate cave formation.
 butler: Would that be all?
 return
 @1
 goto-dialog 61
 @2
-butler: Right then. Enjoy your night!
+butler: Right, then. Enjoy your night!
 	endConversation(1);
 stop
 @3
@@ -1997,19 +1997,19 @@ goto-dialog 62
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I actually had a few questions about the guests.</Text>
+                    <Text xml:space="preserve">I had a few questions about the guests.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Nope, I think I am good.</Text>
+                    <Text xml:space="preserve">No, I'm good.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">That'll be all, Jenkins.</Text>
+                    <Text xml:space="preserve">That's all, Jenkins.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2021,46 +2021,46 @@ goto-dialog 62
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: Very well! Ask away!
+butler: Very well. Ask.
 return
 @1
 option-off 1
-butler: I've known Madame Spanx the longest out of any of our guests and I can swear the woman never ages.
-butler: Maybe it's all the kale she keeps eating.
+butler: Of all the guests in attendance tonight, I've known Madame Spanx. I swear, the woman never ages.
+butler: Maybe there is something to all those kale protein shakes she drinks. I am still not willing to try one, though.
 	checkIfButlerIsOn(1);
 return
 @2
 option-off 2
-butler: Our guest is quite out of this world... though don't say that to her. Let's just say her er... alien nature has not gone unnoticed by most and she'd rather not discuss it in casual conversation.
-butler: And, please, do not mention the horns!
+butler: Our guest is quite out of this world. Though, I would not try that line on her. For one, she has certainly already heard it tonight.
+butler: And, word of wisdom, do not mention the horns!
 	checkIfButlerIsOn(2);
 return
 @3
 option-off 3
-butler: One of the shyer people we've had under our roof for sure. There's just something about - something exceedingly... appealing.
-butler: Beg your pardon, that wasn't an appropriate comment to make about an honored guest.
+butler: She is certainly one of our more reticent guests. But she did come here, so I believe she is still looking for some form of connection.
+butler: I advise extreme tact and understanding in approaching her.
 	checkIfButlerIsOn(3);
 return
 @4
 option-off 4
-butler: Quite a riot that one is! I don't believe I've ever met a woman who could drink me under the table and continue drinking as if it were nothing!
-butler: I hear she's jumped aboard the sober train these days tough. A pity really...
+butler: Quite a riot, that one is! I don't believe I've ever met a woman who could drink me under the table without hesitation! Not that I, er. Ahem.
+butler: I've heard that she's sober these days, though. I hope she hasn't lost her sense of humor.
 	checkIfButlerIsOn(4);
 return
 @5
 option-off 5
-butler: A fine, upstanding member of the Super Victory League - or so he claims. For as grand as his list of achievements is, I fear I've not heard much of him.
-butler: I suppose 'tis natural when one spends as much time as I do cleaning bat guano.
+butler: A fine, upstanding member of the Super Victory League. Or so he claims. His list of achievements is quite grand, yet I know very little about him as a person.
+butler: Though, that could be a failing of my own sources. Lately, I've had to spend more time than usual cleaning bat guano. Ugh.
 	checkIfButlerIsOn(5);
 return
 @6
 //(after every option has been selected]]
 	modifyscore(1,1);
 option-off 6
-butler: You... want to know more about me? Moi?
-butler: I am sorry... it's just that no one's ever asked me about myself before - not once in the three decades I've spent slaving away for a master that's not even home to entertain his own guests.
-butler: I am... well... my name is Burt. I work for Master Wruce. And... I should really get to work now. I would love to talk to you some more after this grand gala is over... should you want to.
-butler: Farewell.
+butler: You...want to know more about me? Whatever for?
+butler: I apologize. It's just that no one has ever asked me about myself before. Never. Not once in the three decades I've spent slaving away for a master who doesn't bother to attend his own parties.
+butler: My, well. My name is Burt. I work for Master Wruce. And...I should really get to work. I am "on the clock" now, as they say, but will have more free time to chat with you later.
+butler: I look forward to seeing you again later.
 	cButler.Name="Burt";
 	checkIfButlerIsOn(6);
 	endConversation(1);
@@ -2101,13 +2101,13 @@ goto-dialog 63
                   </DialogOption>
                   <DialogOption>
                     <ID>6</ID>
-                    <Text xml:space="preserve">Actually, I just wanna know more about you</Text>
+                    <Text xml:space="preserve">Actually, I want to know more about you.</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>7</ID>
-                    <Text xml:space="preserve">I think that's all</Text>
+                    <Text xml:space="preserve">I think that's all.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2120,29 +2120,29 @@ goto-dialog 63
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(1,-1);
-butler: It's Burt actually....
+butler: It's Burt, actually.
 return
 @1
-butler: It's quite alright...
+butler: It's quite alright.
 butler: I am accustomed to this treatment.
-butler: Enjoy the party!
+butler: Enjoy the party.
 	endConversation(1);
 stop
 @2
-butler: (murmuring) Why I never...
-butler: Have a jolly good time!
+butler: (murmuring) Why, I never.
+butler: Have a jolly good time, daters.
 	endConversation(1);
 stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Oh I am so sorry!</Text>
+                    <Text xml:space="preserve">Oh, I am so sorry!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">My apologies Jeremiah.</Text>
+                    <Text xml:space="preserve">My apologies, Jeremiah.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2154,10 +2154,10 @@ stop]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: Are you certain? No queries about this mansion or the many colorful characters that are convening under this roof?
+butler: Truly? No queries about this mansion, or the many colorful characters convening under this roof?
 return
 @1
-butler: Right then. Enjoy your night!
+butler: Right, then. Enjoy your night.
 	endConversation(1);
 stop
 @2
@@ -2172,7 +2172,7 @@ goto-dialog 62
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">That'll be all Jenkins</Text>
+                    <Text xml:space="preserve">That's all, Jenkins.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2184,7 +2184,7 @@ goto-dialog 62
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: You've barely talked to any of the other guests! Surely you'd rather be talking to them right now, unless of course you had questions.
+butler: You've barely spoken to our super-charged guests. Your time would be better spent speaking to them. Unless you have questions.
 goto-dialog 97]]></Script>
                 <DialogOptions />
               </Dialog>
@@ -2194,7 +2194,7 @@ goto-dialog 97]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: The clock is ticking, my friend! Do not waste this night talking to this old codger, unless of course you had questions.
+butler: The clock is ticking. Do not waste your night talking to an old codger, unless you have questions.
 goto-dialog 97]]></Script>
                 <DialogOptions />
               </Dialog>
@@ -2216,19 +2216,19 @@ goto-dialog 63
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">So what's the deal with this giant mansion? It's not a secret superhero base is it?</Text>
+                    <Text xml:space="preserve">This mansion is incredible! It's a secret superhero base, isn't it?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I had a few questions about the other guests</Text>
+                    <Text xml:space="preserve">I have questions about the other guests.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">I think I am good!</Text>
+                    <Text xml:space="preserve">I don't need anything.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2240,7 +2240,7 @@ goto-dialog 63
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-butler: And that is midnight! Thank you, honored guest, for gracing this party with your presence. I must kindly ask you to leave the premise though.
+butler: And it is now midnight. Thank you, honored guest, for gracing this party with your presence. I must kindly ask you to vacate the mansion, with or without a date.
 	cEgo.ChangeRoom(7);
 stop
 ]]></Script>
@@ -2257,7 +2257,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-ego: I should probably not wander there.
+ego: I probably shouldn't go over there.
 stop
 ]]></Script>
                 <DialogOptions />
@@ -2268,7 +2268,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-ego: I need to go
+ego: I need to go.
 return
 ]]></Script>
                 <DialogOptions />
@@ -2284,11 +2284,11 @@ return
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-// ego: Hello, can I come in?
-guard1: Welcome to Wruce Bayne's manor, home of the--
+// ego: Hello.
+guard1: Welcome to Bayne Manor, home of the-
 // 	askNameInput();
 guard2: CHARLIE.
-guard1: Er, sorry. Welcome to name redacted manor. Name?
+guard1: Er, sorry. Welcome to name-redacted manor! Name?
 return
 @1
 	playerName = "Dream Spider";
@@ -2330,7 +2330,7 @@ goto-dialog 7
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-	cGuard1.Say("I know who you are, %s",playerName);
+	cGuard1.Say("I know who you are, %s.",playerName);
 stop
 ]]></Script>
                 <DialogOptions />
@@ -2342,7 +2342,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 guard2: Dream Spider, huh? Had any run-ins with Spiderman? I'd think he'd wanna protect the IP, at least.
-guard1: Oh my god, you can't just ask superheroes about their IP.
+guard1: Oh my God, you can't just ask superheroes about their IP.
 guard2: Sorry.
 guard1: Dream Spider, welcome to the party! ...Oh, I'm sorry, you're not on the list.
 return
@@ -2360,7 +2360,7 @@ goto-dialog 9
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Wait, I have this! show Super Victory League card</Text>
+                    <Text xml:space="preserve">Wait, I have this Super Victory League card!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2390,7 +2390,7 @@ goto-dialog 9]]></Script>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Wait, I have this! show Super Victory League card</Text>
+                    <Text xml:space="preserve">Wait, I have this Super Victory League card!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2421,7 +2421,7 @@ goto-dialog 9
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Wait, I have this! show Super Victory League card</Text>
+                    <Text xml:space="preserve">Wait, I have this Super Victory League card!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2436,18 +2436,18 @@ goto-dialog 9
 guard1: Better luck next time, friend!
 guard2: He's not your friend.
 guard1: Er, better luck next time, buddy!
-guard2: He's not your... hey, please step back and make room for attending guests.
+guard2: He's not your... hey, step back. Make room for attending guests.
 	player.Think("Crap! I'll need to think of something else.");
 	player.Think("My brilliant disguise didn't work. All I have is this Super Victory Card.");
 	Display("You stand there in silence.");
-	player.Think("oh");
+	player.Think("Oh.");
 return
 @1
 goto-dialog 9]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Wait, I have this! show Super Victory League card</Text>
+                    <Text xml:space="preserve">Wait, I have this Super Victory League card!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2536,13 +2536,13 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-spanx: Oh hey. You're new around here.
+spanx: Oh, hey. You're new around here.
 return
 @1
 	modifyscore(6, -1);
 spanx: Just what I said. I've been coming to these things for months. Never seen you before.
 ego: Oh, yes, well... I've been busy.
-spanx: Yeah, I've never heard that before. Not like the rest of us spend our days fighting chaos gods or doomed doctors or washed-up comedians. (SIGH)
+spanx: Right, sure. It's not like the rest of us spend our days fighting chaos gods or doomed doctors or washed-up comedians. Sigh.
 spanx: So, what brings you here?
 goto-dialog 11
 @2
@@ -2550,7 +2550,7 @@ spanx: Figured. What brought you this way?
 goto-dialog 11
 @3
 	modifyscore(6, 1);
-spanx: ... You might wanna work on that alias thing, name. (chuckles) But alright, I'll bite. What brings you here?
+spanx: ... You might wanna work on your alias. But alright, I'll bite. What brings you here?
 goto-dialog 11]]></Script>
                 <DialogOptions>
                   <DialogOption>
@@ -2582,7 +2582,7 @@ goto-dialog 11]]></Script>
 return
 @1
 	modifyscore(6, -1);
-spanx: Ugh, does that line work on other superheroes? Or anyone with a pulse?
+spanx: Ugh, does that line work on other superheroes? Or on anyone with a pulse?
 ego: No, but I keep trying.
 spanx: Maybe you should stop.
 goto-dialog 12
@@ -2590,7 +2590,7 @@ goto-dialog 12
 goto-dialog 20
 @3
 	modifyscore(6, 1);
-spanx: ... and that's you're opening line?
+spanx: And that's you're opening line?
 ego: At least I'm honest.
 spanx: Well, I guess that's true.
 goto-dialog 12
@@ -2657,7 +2657,7 @@ goto-dialog 19
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">So...what's with the stick?</Text>
+                    <Text xml:space="preserve">What's with the stick?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2694,7 +2694,7 @@ goto-dialog 16
 option-off 4
 option-on 5
 	modifyscore(6, 1);
-spanx: Yes. Highly poisonous, very moody. Kind of two-faced, to tell the truth: sweet on one side, a total jerk on the other. He has the cutest little dent in his scales, just over his eyes.
+spanx: Yes. Highly poisonous, very moody. Kind of two-faced, to tell the truth: sweet on one side, a total jerk on the other. He has the cutest little dent over his left eye.
 return
 @5
 goto-dialog 19
@@ -2714,7 +2714,7 @@ goto-dialog 19
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Wait - in your spare time, you RUN a crossfit gym?!</Text>
+                    <Text xml:space="preserve">Wait. In your spare time, you run a crossfit gym? For fun?!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2739,7 +2739,7 @@ goto-dialog 19
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 spanx: Hit 'em hard and out-survive them. I can lift more than your average...well, anyone. And bullets just ping right off me.
-ego: Seems like it'd be impossible for you to be beaten.
+ego: So you can't be hurt?
 spanx: If only that were true.
 spanx: I mostly focus on mortals who have made pacts with dark gods or forces. I punch the sense back into 'em.
 return
@@ -2782,16 +2782,16 @@ goto-dialog 19
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 spanx: For the challenge. I like to see something strong, and then get stronger than it.
-spanx: Only bad guys, of course. Though teaming up with other heroes has worked well for my training regimen, too.
+spanx: Only bad guys, of course. Though teaming up with other heroes has worked well for my training regimen.
 return
 @1
 	modifyscore(6, 1);
-spanx: And I like people who aren't afraid of intensity. It's very...exciting.
+spanx: And I like people who aren't afraid of intensity. It's...invigorating.
 goto-dialog 13
 @2
 	modifyscore(6, -1);
 spanx: (shrugs) One person's creepy is another person's total package.
-ego: ... whatever you say.
+ego: ... Whatever you say.
 goto-dialog 13
 @3
 goto-dialog 19
@@ -2823,7 +2823,7 @@ goto-dialog 19
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-spanx: Yes! Why should overcoming fears and building muscle be limited to superheroes? I want to help ordinary people do it, too. With as few lifting injuries as possible.
+spanx: Yes! Why should building muscle and overcoming fear be limited to superheroes? I want to help ordinary people do it, too. With as few lifting injuries as possible.
 spanx: CrossFit is my favorite way to relax.
 return
 @1
@@ -2834,7 +2834,7 @@ spanx: Only to people I like. You should... come by and see.
 goto-dialog 13
 @2
 	modifyscore(6, -1);
-spanx: Ugh, you're one of those. It's not a cult, it's a relatively small group of people having fitness-related beliefs or practices regarded by others as strange or sinister.
+spanx: Ugh, you're one of those. It's not a cult. It's a relatively small group of people having fitness-related beliefs or practices regarded by others as strange or sinister.
 ego: ... How is that not a cult?!
 spanx: Pft, typical.
 goto-dialog 13
@@ -2898,8 +2898,8 @@ goto-dialog 19]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-spanx: Oh right, you're new.
-spanx: Well, I've been operating in Warren City for about 50 years. Sometimes I team up, but mostly I work alone, clearing the streets of criminals and such.
+spanx: Oh, right, you're new.
+spanx: Well, I've been operating in Warren City for about 50 years. Sometimes I team up, but mostly I work alone. Clearing the streets of criminals and such.
 spanx: In my spare time, I'm the founder of Underground Crossfit. And I have a snake named Harvey.
 goto-dialog 13
 ]]></Script>
@@ -2925,7 +2925,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(6, 1);
-spanx: You picked a good spot to do it. Not just the speed date, I mean, but the kitchen. You know the best people will be spending the party in here.
+spanx: You picked a good spot to do it. The kitchen, I mean. It's quieter, more intimate. Good things happen in the kitchen.
 return
 @1
 goto-dialog 21
@@ -2943,7 +2943,7 @@ goto-dialog 19
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Are you saying you're the best?</Text>
+                    <Text xml:space="preserve">Are you saying somethiing good will happen in here?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3007,7 +3007,7 @@ goto-dialog 19
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 spanx: It's my favorite weapon. Tap it twice, and concussive bolts form on either end.
-ego: OOOO, scary.
+ego: Ooo, scary.
 spanx: Criminals say the same thing.
 return
 @1
@@ -3036,9 +3036,9 @@ goto-dialog 19
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-spanx: (shrugs) I've got good taste. And it's not for the swill they're serving at the bar outside.
+spanx: (shrugs) I've got good taste. And not for the swill they're serving at the bar outside.
 ego: What're you making?
-spanx: Protein shake.
+spanx: Kale protein shake.
 return
 @1
 goto-dialog 18
@@ -3082,10 +3082,10 @@ goto-dialog 19
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-spanx: So... I liked talking to you. Wanna get out of here?
+spanx: Hey. I liked talking to you. Wanna get out of here?
 return
 @1
-spanx: Just like that. I'm a busy woman and I don't like to waste time. 
+spanx: Just like that. I'm a busy woman, and I don't like to waste time. 
 option-off 1
 option-off 2
 option-off 3
@@ -3109,7 +3109,7 @@ option-on 5
 spanx: See, that's what I like about you. You don't waste time. I say we get out of here, get some shakes, and then head to my place. Sound good?
 return
 @4
-spanx: I'm thinking we spend the night together. You come to my apartment, we wake up early, we get protein shakes, and we head to my gym. Then we see if we want to keep dating. Sound good?
+spanx: I'm thinking we spend the night together. You come to my apartment, stay the night. We get up early, get protein shakes, and head to my gym. Then we see if we want to see each other again. Sound good?
 option-off 4
 option-off 5
 option-on 6
@@ -3169,7 +3169,7 @@ goto-dialog 101
                   </DialogOption>
                   <DialogOption>
                     <ID>6</ID>
-                    <Text xml:space="preserve">No, thanks. </Text>
+                    <Text xml:space="preserve">No, thanks.</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3192,10 +3192,10 @@ goto-dialog 101
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-	cEgo.Say("Hey there! My name is %s",playerName);
-evil: Greetings Fellow Do-gooder!
-evil: I am Master... er... Good Man! I am the superhero Good Man who is in no way related to the evil Master Masks.
-evil: So what brings you to Wruce Bayne's party? The food? The drinks? The prospect of learning the secret weaknesses of humanity's foremost defenders?
+	cEgo.Say("Hello. I'm %s.",playerName);
+evil: Greetings Fellow Do-Gooder!
+evil: I am Master...er...Good Man! Who is in no way related to the evil Master Masks.
+evil: What brings you to Wruce Bayne's party? The food? The drinks? The prospect of learning the weaknesses of humanity's foremost defenders?
 return
 @1
 goto-dialog 25
@@ -3213,13 +3213,13 @@ goto-dialog 37
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I am just here to make friends!</Text>
+                    <Text xml:space="preserve">I'm trying to meet people.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">... Good Man? That's original</Text>
+                    <Text xml:space="preserve">... Good Man? That's...original.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3231,7 +3231,7 @@ goto-dialog 37
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-evil: Hmm. A person of few words I see...
+evil: Hmm. A person of few words, I see...
 return
 @1
 goto-dialog 26
@@ -3250,7 +3250,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Apologies, I didn't expect to find anyone here</Text>
+                    <Text xml:space="preserve">Apologies, I didn't expect to find anyone here.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3289,7 +3289,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">What are you even doing here?</Text>
+                    <Text xml:space="preserve">What are you doing here?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3308,14 +3308,14 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(2, 1);
-evil: Quietly contemplating your life, I see! I, too, am fond of the occasional bout of silence. If only these Do-Gooders didn't spend so much time ranting about the merits of truth, justice and the...
-evil: Sorry, I digressed.
+evil: Quietly contemplating your life, I see! I, too, am fond of the occasional sullen silence. If only these do-gooders didn't spend so much time ranting about the merits of truth, justice and the...
+evil: Sorry, I digress.
 return
 @1
 option-off 1
 option-on 2
 option-on 3
-evil: So what brings you to Bayne's office? Did he send you to check in on his workspace?
+evil: What brings you to Bayne's office? Did he send you to check on his workspace?
 return
 @2
 goto-dialog 30
@@ -3335,13 +3335,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Just wandering around to find people to have a conversation with</Text>
+                    <Text xml:space="preserve">I'm just trying to find people to talk to.</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Dude, I was just wandering. Don't be so shifty</Text>
+                    <Text xml:space="preserve">No, he isn't even here. Why would you assume that?</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3360,7 +3360,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 evil: Why do you ask that?
-evil: Is this not a completely normal place for a man to take a walk? Are you implying I have some... nefarious purpose for being here in my host's office without him?!
+evil: Is this not a completely normal place for a man to take a walk? Are you implying I have some nefarious purpose for being here. In my host's office? Without him?!
 return
 @1
 goto-dialog 29
@@ -3374,13 +3374,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">No! Of course not!!</Text>
+                    <Text xml:space="preserve">Of course not.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I mean... duh?</Text>
+                    <Text xml:space="preserve">I mean...duh?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3401,10 +3401,10 @@ stop
 	modifyscore(2, -2);
 narrator: The masked man sighs.
 evil: Of course you didn't. And you are absolutely correct, for I am up to no mischief at all!
-evil: Absolutely nothing at all!
+evil: Absolutely nothing at all.
 return
 @1
-evil: So what brings you to Bayne's office? Did he send you to check in on his workspace?
+evil: So, what brings you to Bayne's office? Did he send you to check on his workspace?
 option-off 1
 option-on 2
 option-on 3
@@ -3427,13 +3427,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Just wandering around to find people to have a conversation with</Text>
+                    <Text xml:space="preserve">I'm just trying to find people to talk to.</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Dude, I was just wandering. Don't be so shifty</Text>
+                    <Text xml:space="preserve">No, he isn't even here. Why would you assume that?</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3451,9 +3451,9 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-evil: Ah... yes... 'friends'.
-evil: Well I hope you find many 'friends'... elsewhere
-evil: I shall be on my way, good evening.
+evil: Ah... yes...People. To...talk to. Of course.
+evil: Well, I hope you find many people to talk to...elsewhere.
+evil: I shall be on my way. Good evening.
 	endConversation(2);
 stop
 ]]></Script>
@@ -3466,10 +3466,9 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(2, 1);
-evil: Shifty?
-evil: I am totally not shifty! I am a fellow champion of justice - a champion that just remembered he had business... elsewhere...
-evil: Farewell, No macro or passage called 'character'.
-evil: I shall see you around!
+evil: What? Is that suspicious to you? I assure you, I am not suspicious!
+evil: I am a fellow champion of justice. A champion who just remembered he has business elsewhere.
+evil: Farewell. I shall see you anon.
 	endConversation(2);
 stop]]></Script>
                 <DialogOptions />
@@ -3481,10 +3480,10 @@ stop]]></Script>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(2, 1);
-evil: Such intelligence! Truly a fellow after my own heart!
-evil: ... Not that I am saying you are correct in your assumption, of course.
-evil: Because you're not...
-evil: I am totally not up to any sort of mischief at my host's expense!
+evil: Such intelligence! Truly, a hero after my own heart!
+evil: Not that I am saying you are correct in your assumption, of course.
+evil: Because you're not.
+evil: I am not up to any sort of mischief at my host's expense. Certainly not.
 return
 @1
 goto-dialog 33
@@ -3498,13 +3497,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">... sure... whatever</Text>
+                    <Text xml:space="preserve">Sure.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I am sorry! I didn't mean to imply that at all!</Text>
+                    <Text xml:space="preserve">I'm sorry. I'm not trying to imply anything, just trying to talk.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3524,8 +3523,8 @@ stop
 @S  // Dialog startup entry point
 	modifyscore(2, 1);
 evil: I wish we could have had more time to continue this engaging conversation.
-evil: But alas, I must be off! To do good! In good places!
-evil: Farewell!!
+evil: But alas, I must be off. To do good! In good places!
+evil: Farewell.
 return
 @1
 	endConversation(2);
@@ -3550,13 +3549,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">[Stay silent]</Text>
+                    <Text xml:space="preserve">[Stay silent].</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Okaaaay... that happened.</Text>
+                    <Text xml:space="preserve">Well. That was...odd.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3575,8 +3574,8 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(2, -1);
-evil: Ah yes... friends - companions - compatriots...
-evil: Totally essential for Do-Gooders... like me!
+evil: Ah yes, of course.
+evil: Totally essential for do-gooders like you. And me. Us.
 return
 @1
 goto-dialog 35
@@ -3590,13 +3589,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">You sound like you don't have too many of them...</Text>
+                    <Text xml:space="preserve">Do you...not have people you like to talk to?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">What are you even doing here?</Text>
+                    <Text xml:space="preserve">What are you doing here?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3615,7 +3614,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(2, 1);
-evil: Hah! You are a funny one! I'll kill you las...er I mean..I'll fill you last! As in fill your glass - with alcohol!
+evil: Hah! You are a funny one! I shall kill you las...er I mean, I shall fill you last! As in, fill your glass. With alcohol!
 return
 @1
 goto-dialog 27
@@ -3629,13 +3628,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">[Stay silent]</Text>
+                    <Text xml:space="preserve">[Stay silent].</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Alright, so what do you do for fun?</Text>
+                    <Text xml:space="preserve">What do you do for fun?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3653,19 +3652,19 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-evil: I enjoy greatly violence... against evil-doers of course! Punching people's faces in and watching them squirm in pain give my life purpose!
-evil: ... I meant evil people of course...
+evil: I greatly enjoy violence.
+evil: Against evil-doers, of course! Punching people, hearing them squish and crunch. Ah, well, when they're evil. Evil squishing.
 return
 @1
 option-off 1
 option-on 2
 option-on 3
 	modifyscore(2, -2);
-evil: Oh yeah, haha....
-evil: Hmmm. Have you ever maybe thought that some of those 'bad guys' had reasons to act out against society?
+evil: Right, hah.
+evil: Then again, have you ever thought that some of those bad guys had reasons to act out against society?
 evil: Have you ever thought that they may have a valid reason for what they did?
-evil: Have you ever once stopped to look at yourself, and ask if maybe your way of life is truly so righteous as you make it out to be...
-evil: Er... I haven't. Haha. Nope, being a Good Guy is awesome! Yeahh... Punch all the bad guys!
+evil: Have you ever once stopped to look at yourself, and ask if maybe your way of life is not nearly so righteous as you delude yourself into believing?!
+evil: Er...not that I have. Hah! Nope. I love being a Good Man. THE Good Man. And punching bad ones.
 return
 @2
 goto-dialog 33
@@ -3678,7 +3677,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Of course! Punching bad guys is fun!!</Text>
+                    <Text xml:space="preserve">Sure, punching bad guys sounds fun.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3690,7 +3689,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">[Stay silent]</Text>
+                    <Text xml:space="preserve">[Stay silent].</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3709,7 +3708,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(2, 1);
-evil: Ahahahahaha! Yes! It is quite original. Thank you for noticing, fellow super hero.
+evil: Ahahahahaha! Yes, it is quite original. Thank you for noticing, fellow super hero.
 evil: I picked it because I am a do-gooder who happens to be a man! Clever, yes?
 return
 @1
@@ -3724,13 +3723,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Not really...</Text>
+                    <Text xml:space="preserve">I...no. Not really.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Yeah totally...</Text>
+                    <Text xml:space="preserve">Sure, yeah.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3748,15 +3747,15 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-evil: Greetings there, "Do-Gooder".
-evil: It is I - "Goodman". Though by now, the truth should be obvious!
-evil: There is no "Goodman". I am the nefarious EDGELORD! Muhahhaha
-evil: I've been observing your progress this entire night - I've watched with glee as you tortured and tormented these Do-Gooders at their own celebration.
-evil: Truly, 'tis a nefarious thing to do - hurting them in their supposed safe space. A more nefarious plan I could never have thought of!
-evil: Therefore, I make to you the offer of a lifetime "Do Gooder". Come with on, in the Edgemobile, and we shall tear up this town tonight!
+evil: Greetings there, Do-Gooder.
+evil: It is I, Good Man. Though. by now, the truth should be obvious.
+evil: There is no Good Man. I am the nefarious EDGELORD! Muhahhaha!
+evil: I have been observing your progress throughout the night. I've watched with glee as you tortured and tormented those Do-Gooders with your vicious conversation. And at their own celebration!
+evil: Truly, 'tis a nefarious thing to do. I am truly impressed, and I do not easily impress. Not at all.
+evil: Therefore, I have come to make you an offer. Join me outside, and let us ride away in the Edgemobile. Into the dark night, as bleak as our souls!
 return
 @1
-evil: MUHAHAHAHA!
+evil: MUAHAHAHAHA!
 goto-dialog 101
 @2
 	cEvil.ChangeRoom(1);
@@ -3787,14 +3786,14 @@ stop]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-ego: "Hey."
-strong: "Hey there."
-ego: "Bar is emptier than I thought it would be."
-strong: "Yeah well, I suppose everyone is trying to make a good impression."
-	cEgo.Say("I'm %s. And you are?", playerName);
-strong: "Call me Lucky Lush. I know some people are cool with telling everyone their secret identity here but no offense, I just don't trust that easy."
-ego: "No worries. So, why'd you come out tonight?"
-strong: "I guess I'm just trying to get back out there. Dating isn't easy for a girl who gets super-strength by drinking alcohol. I can't really go out for casual drinks without worrying about crushing my date's hand accidentally."
+ego: Hey.
+strong: Hey, there.
+ego: Bar is emptier than I thought it would be.
+strong: Yeah, well, I suppose everyone's trying to make a good impression. Hard to do when you're sloppy.
+	cEgo.Say("I'm %s. What's your name?", playerName);
+strong: Call me Lucky Lush. I know some people are cool with telling everyone their secret identity at these things, but no offense, I don't plan to.
+ego: That's fine. Why did you come out tonight?
+strong: I guess I'm just trying to get back out there. Dating isn't easy for a girl who gets super-strength by drinking alcohol. I can't really go out for casual drinks. Not without worrying about crushing my date's hand accidentally.
 return
 @1
 goto-dialog 39
@@ -3817,7 +3816,7 @@ goto-dialog 42]]></Script>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Wow, that's got to be rough.</Text>
+                    <Text xml:space="preserve">Sounds rough.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3829,7 +3828,7 @@ goto-dialog 42]]></Script>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-strong: I guess I just feel comfortable here. Don't worry, I haven't had anything to drink yet.
+strong: I guess I just feel comfortable here. Don't worry, I haven't had anything to drink. Yet.
 return
 @1
 goto-dialog 40
@@ -3864,7 +3863,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">Wow, that's got to be rough.</Text>
+                    <Text xml:space="preserve">Sounds rough.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3882,7 +3881,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-strong: My super-strength increases depending on my blood alcohol content. The more sloshed I get, the stronger I am - which is exactly as dangerous as it sounds.
+strong: My super-strength increases depending on my blood alcohol content. The more sloshed I get, the stronger I am. Which is exactly as dangerous as it sounds.
 return
 @1
 goto-dialog 41
@@ -3899,7 +3898,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Sounds awesome!</Text>
+                    <Text xml:space="preserve">That sounds awesome.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3917,7 +3916,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">You must have had to learn a lot of self control and discipline.</Text>
+                    <Text xml:space="preserve">You must have had to learn a lot of discipline.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3936,7 +3935,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,-1);
-strong: Yeah... it's really not. I don't really like to talk about it.
+strong: Yeah...it's really not. I don't really like to talk about it.
 return
 @1
 goto-dialog 42
@@ -3951,13 +3950,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Sorry, sorry. You're right, that was insensitive. I can't imagine how rough it is to have to deal with that.</Text>
+                    <Text xml:space="preserve">Sorry, that was insensitive. It must be difficult.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Embrace it, babe. Anyway, can I buy you a drink?</Text>
+                    <Text xml:space="preserve">Anyway, can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3982,7 +3981,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,1);
-strong: Yeah, I guess. I've dealt with it, though. I appreciate you not being a jerk about it. So what about you? Why are you here?
+strong: Yeah, I guess. I've dealt with it. I appreciate you not being a jerk about it. So, what about you? Why are you here?
 return
 @1
 goto-dialog 43
@@ -3999,7 +3998,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Just bored, looking for a good time.</Text>
+                    <Text xml:space="preserve">I'm looking for a good time.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4011,13 +4010,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">My powers make it hard for me to date too, actually. I guess I'm just here looking for a connection.</Text>
+                    <Text xml:space="preserve">My powers make it hard for me to date, too. I'm looking for a connection.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">I have the power to perspire tequila! Let's go, hot stuff!</Text>
+                    <Text xml:space="preserve">I have the power to perspire tequila! It's like our powers match.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4059,7 +4058,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Hell yeah! I'm trying to get as many numbers as I can tonight.</Text>
+                    <Text xml:space="preserve">I'm trying to get as many numbers as I can tonight.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4071,7 +4070,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">I'm not sure if I want something super serious, is all.</Text>
+                    <Text xml:space="preserve">I'm not sure if I want something serious.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4107,25 +4106,25 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Nothing wrong with that. You're pretty awesome, I can't imagine anyone not wanting to get to know you on that level.</Text>
+                    <Text xml:space="preserve">I can't imagine anyone not wanting to get to know you.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Yeah...that's kind of weird. I don't know if you should be looking for something real at a speed dating event.</Text>
+                    <Text xml:space="preserve">You're looking for something real at a speed dating event? Really?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">I like that. It's hard to find real connections, but being honest about it is a really good start.</Text>
+                    <Text xml:space="preserve">I like that you're honest about it.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">Good luck with that, sweetheart. Doubt anyone here is going to want to get that deep on the first date.</Text>
+                    <Text xml:space="preserve">I doubt anyone here will want to get that deep on the first date.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4144,12 +4143,12 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,1);
-strong: You're pretty cool, you know that? To be honest I was kind of nervous to come out here tonight but I'm really glad I did.
-strong: I think I'm going to go take a walk outside and clear my head, but it was really nice to meet you.
+strong: You're pretty cool, you know that? To be honest, I was kind of nervous to come out here tonight. I'm really glad I did.
+strong: I think I'm going to take a walk outside. Clear my head. It was really nice to meet you.
 return
 @1
 	modifyscore(3,1);
-strong: Who knows, maybe we'll run into each other again.
+strong: Who knows? Maybe we'll run into each other again.
 	endConversation(3);
 stop
 @2
@@ -4160,13 +4159,13 @@ stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Nice to meet you too. Enjoy your walk, maybe I'll see you around sometime.</Text>
+                    <Text xml:space="preserve">Nice to meet you, too.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Leaving so soon? All right, I guess I'll get myself a drink. See ya.</Text>
+                    <Text xml:space="preserve">I guess I'll get myself a drink. See ya.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4179,12 +4178,12 @@ stop]]></Script>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point	
 	modifyscore(3,-1);
-strong: Well, I suppose that's what I get for being honest.
-strong: Hey, I uh...I'm gonna go for a walk, clear my head. Too many people in here. I'll see you around though?
+strong: Well, I guess that's what I get for being honest.
+strong: Hey, I uh...I'm gonna go for a walk. Clear my head. There's...too many people in here. I'll see you around, though.
 return
 @1
 	modifyscore(3,1);
-strong: Who knows, maybe we'll run into each other again.
+strong: Who knows? Maybe we'll run into each other again.
 	endConversation(3);
 stop
 @2
@@ -4196,13 +4195,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Oh, yeah, sure. I guess I'll see you around? Have a good night.</Text>
+                    <Text xml:space="preserve">Have a good night.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Sure, move aside. I've got a few drinks calling my name.</Text>
+                    <Text xml:space="preserve">Bye. I've got a few drinks calling my name.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4220,7 +4219,7 @@ strong: Look, I think I'm going to go take a walk or something. I'll see you aro
 return
 @1
 	modifyscore(3,1);
-strong: Who knows, maybe we'll run into each other again.
+strong: Who knows? Maybe we'll run into each other again.
 	endConversation(3);
 stop
 @2
@@ -4231,13 +4230,13 @@ stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">All right. Have a good rest of your night.</Text>
+                    <Text xml:space="preserve">Have a good rest of your night.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Aw come on, I thought we were really hitting it off! Whatever, I'm gonna hit the bar. See ya.</Text>
+                    <Text xml:space="preserve">Okay, bye. I'm off to the bar.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4250,7 +4249,7 @@ stop]]></Script>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,1);
-strong: Ha. Not at all, I think it's kind of sweet, actually. Not enough people are open with their feelings.
+strong: HNot at all. I think it's kind of sweet, actually. Not enough people are open with their feelings.
 return
 @1
 goto-dialog 44
@@ -4273,19 +4272,19 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Ugh, gross. Didn't think it was therapy session time.</Text>
+                    <Text xml:space="preserve">Ugh, I didn't realize this was therapy session time.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">And what about you?</Text>
+                    <Text xml:space="preserve">What about you?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">I wouldn't say I'm that open...</Text>
+                    <Text xml:space="preserve">I wouldn't say that I'm that open...</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4304,7 +4303,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,2);
-strong: Huh. You're honest, I like it. That's pretty refreshing actually.
+strong: Huh. You're honest. I like it. That's pretty refreshing, actually.
 return
 @1
 goto-dialog 44
@@ -4327,13 +4326,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Beats the alternative. Don't get too excited, I'm usually not this nice.</Text>
+                    <Text xml:space="preserve">Don't get too excited. I'm usually not this nice.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">And what about you? Are you looking for a connection?</Text>
+                    <Text xml:space="preserve">What about you? What are you looking for?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4358,7 +4357,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,-2);
-strong: I don't need super strength to hit you in the face, just so you know.
+strong: I don't need super strength to hit you in the face. Just so you know.
 return
 @1
 goto-dialog 44
@@ -4371,13 +4370,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Sorry - wait so why are you here?</Text>
+                    <Text xml:space="preserve">So why are you here?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Hey, I might like that, you never know.</Text>
+                    <Text xml:space="preserve">Actually, that'd be great for my piece. Er, night.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4396,7 +4395,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,-1);
-strong: Hah. Real funny. So what's your story? Why are you here?
+strong: Hah. Real funny. So, what's your story? Why are you here?
 return
 @1
 goto-dialog 43
@@ -4413,7 +4412,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Just bored, looking for a good time.</Text>
+                    <Text xml:space="preserve">I'm looking for a good time.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4425,13 +4424,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">My powers make it hard for me to date too, actually. I guess I'm just here looking for a connection.</Text>
+                    <Text xml:space="preserve">My powers make it hard for me to date, too. I'm looking for a connection.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">I have the power to perspire tequila! Let's go, hot stuff!</Text>
+                    <Text xml:space="preserve">I have the power to perspire tequila! It's like we're a match.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4449,7 +4448,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-strong: I am, actually. Omega Patrol took me in a few months ago. They've really helped me control my powers. They keep me, and everyone around me, safe while letting me help out.
+strong: I am, actually. Omega Patrol took me in a few months ago. They've really helped me control my powers. They keep me, and everyone around me, safe. Meanwhile, I get to help out.
 return
 @1
 goto-dialog 54
@@ -4471,7 +4470,7 @@ stop]]></Script>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Aw, that's no fun. I bet you could do some damage if they let you off the leash.</Text>
+                    <Text xml:space="preserve">That doesn't sound like much fun.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4483,7 +4482,7 @@ stop]]></Script>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">I think it's great you've found a team that accepts and supports you.</Text>
+                    <Text xml:space="preserve">It's great you've found people who accept and support you.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4502,7 +4501,7 @@ stop]]></Script>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,1);
-strong: It can be. I mean, it's not all bad but it's definitely not what I would have picked if I had been able to choose for myself.
+strong: It can be. I mean, it's not all bad. But it's definitely not what I would have picked if I'd been able to choose for myself.
 return
 @1
 goto-dialog 42
@@ -4517,13 +4516,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Man, that has to be really rough.</Text>
+                    <Text xml:space="preserve">That sounds really hard.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Well, we don't get to pick, unfortunately. Enough of this depressing stuff... can I buy you a drink?</Text>
+                    <Text xml:space="preserve">Enough of this depressing stuff. Can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4563,13 +4562,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I'm sure they feel the same way. Sorry you have to deal with that though. Must be rough.</Text>
+                    <Text xml:space="preserve">I'm sorry you have to deal with that, though. Must be rough.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Yeah, yeah. I'm sure they're great. So... can I buy you a drink?</Text>
+                    <Text xml:space="preserve">So, can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4594,7 +4593,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,-1);
-strong: Yeah well, maybe I don't see it as a leash, and maybe I don't want to do any damage. Ever think of that? Ass.
+strong: Yeah, well, it's good for me. Maybe I don't want to do any damage. Ever think of that? Ass.
 return
 @1
 goto-dialog 42
@@ -4609,13 +4608,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I'm sorry, I didn't even think about that. It must be really hard for you.</Text>
+                    <Text xml:space="preserve">I'm sorry. It must be really hard for you.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Sure, whatever. So...heh...can I buy you a drink?</Text>
+                    <Text xml:space="preserve">So, can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4640,7 +4639,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,-2);
-strong: Uh...wow, okay? I'm sure whatever asshole group you crawled out of is pretty lame too, but I wasn't going to be rude about it.
+strong: Uh...wow, okay? I'm sure whatever asshole group you crawled out of is pretty lame, too, but I wasn't going to be rude about it.
 return
 @1
 goto-dialog 42
@@ -4655,13 +4654,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Sorry. Guess they must be pretty cool to help you deal with your powers. It has to be hard.</Text>
+                    <Text xml:space="preserve">Sorry. It has to be hard.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Just callin' em like I see 'em. So...heh...can I buy you a drink?</Text>
+                    <Text xml:space="preserve">So, can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4686,7 +4685,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,2);
-strong: Ha, thanks. They've kind of become my family. Dealing with my powers can suck, but with them it's easier.
+strong: Ha, thanks. They've kind of become my family. Dealing with my powers can suck, but with them, it's easier.
 return
 @1
 goto-dialog 42
@@ -4701,13 +4700,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">That's really cool that you have people you can rely on. It must be tough dealing with your abilities.</Text>
+                    <Text xml:space="preserve">It must be tough dealing with your abilities.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">So...can I buy you a drink?</Text>
+                    <Text xml:space="preserve">So, can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4732,7 +4731,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,-2);
-strong: Jesus, you can't just ask people if they've killed someone. You're disgusting.
+strong: Jesus, you can't just ask people if they've killed someone. Are you new to superheroing? You're disgusting.
 return
 @1
 goto-dialog 42
@@ -4747,13 +4746,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Sorry, sorry. You're right, that was insensitive. I can't imagine how rough it is to have powers like that.</Text>
+                    <Text xml:space="preserve">Sorry, sorry. Yeah, I'm kind of new.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Hey, most supers have done it at least once. No sweat. So...heh...can I buy you a drink?</Text>
+                    <Text xml:space="preserve">Well, let's move on. Can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4778,7 +4777,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(3,2);
-strong: I really did. I worked hard on getting to where I am now. It's been a lot of practice and patience, but I'm proud of how far I've come.
+strong: I really did. I worked hard to get where I am now. It's been a lot of practice and patience, but I'm proud of how far I've come.
 return
 @1
 goto-dialog 42
@@ -4793,13 +4792,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I'm so sorry you've had to deal with all of that. Has to be rough.</Text>
+                    <Text xml:space="preserve">Has to be rough.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">If I were you, I'd wanna let loose. Speaking of which, can I buy you a drink?</Text>
+                    <Text xml:space="preserve">So, can I buy you a drink?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4825,35 +4824,41 @@ stop
 @S  // Dialog startup entry point
 strong: Hey you.
 ego: Hey.
-strong: So, I was thinking...I thought we hit it off pretty good earlier. You were really understanding about my powers and you weren't a jerk about it - which is actually super rare. I just had a really nice time talking to you and I don't want it to end? Is that weird?
+strong: So, I was thinking...I thought we hit it off pretty well earlier. You were really understanding about my powers, and you weren't a jerk about it. Which is actually super rare. 
+strong: I just had a really nice time talking to you, and I don't want it to end? I guess? Is that weird?
 return
 @1
-strong: So...I hope this isn't too forward but I was wondering if you wanted to...maybe continue the evening? Maybe get some food or something? That sounds really lame but...I just couldn't let you leave without saying anything. If not that's okay, I just thought I'd ask.
+strong: So...I hope this isn't too forward, but I was wondering if you wanted to...maybe continue the evening? Maybe get some food or something? 
+strong: That sounds really lame, but...I couldn't let you leave without saying anything. 
+strong: If not that's okay, I just thought I'd ask.
 option-off 1
 option-off 2
 option-on 3
 option-on 4
 return
 @2
-strong: So...I hope this isn't too forward but I was wondering if you wanted to...maybe continue the evening? Maybe get some food or something? That sounds really lame but...I just couldn't let you leave without saying anything. If not that's okay, I just thought I'd ask.
+strong: So...I hope this isn't too forward, but I was wondering if you wanted to...maybe continue the evening? Maybe get some food or something? 
+strong: That sounds really lame, but...I couldn't let you leave without saying anything. 
+strong: If not, that's okay. I just thought I'd ask.
 option-off 1
 option-off 2
 option-on 3
 option-on 4
 return
 @3
-strong: Oh god, I love milkshakes. You're perfect, you know that?
+strong: Oh God, I love milkshakes. You're perfect, you know that?
+strong: I mean, uh. Right.
 strong: Let's get out of here. 
 goto-dialog 101
 @4
-strong: Hey, no worries! It was cool to meet you, anyway. Have a good rest of your night. 
+strong: Hey, no worries! It was cool to meet you, anyway. Have a good night. 
 	cStrong.ChangeRoom(7);
 stop
 ]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I had a really nice time too. And I'm also glad you don't think I'm a jerk.</Text>
+                    <Text xml:space="preserve">I had a nice time, too. And I'm glad you don't think I'm a jerk.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4865,13 +4870,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">That sounds great! I'm feeling milkshakes, how about you?</Text>
+                    <Text xml:space="preserve">I'm feeling milkshakes, how about you?</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">I'm flattered, but I think I'm going to pass on this one. Have a good night.</Text>
+                    <Text xml:space="preserve">I'm flattered, but I can't.</Text>
                     <Show>False</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4897,34 +4902,42 @@ stop
 shy: Psst....over here!
 return
 @1
-shy: I don't really like people all that much, but I do really like you. Sorry I wasn't super chatty inside but...I want to get to know you better. Away from all of the party craziness maybe?
+shy: I don't really like people all that much, but I do really like you. 
+shy: I'm sorry I wasn't super chatty inside, but...I want to get to know you better. Away from all of the party craziness.
+shy: What do you think?
 option-off 1
 option-off 2
 option-on 3
 option-on 4
 return
 @2
-shy: I don't really like people all that much, but I do really like you. Sorry I wasn't super chatty inside but...I want to get to know you better. Away from all of the party craziness maybe?
+shy: I don't really like people all that much, but I do really like you. 
+shy: I'm sorry I wasn't super chatty inside, but...I want to get to know you better. Away from all of the party craziness.
+shy: What do you think?
 option-off 1
 option-off 2
 option-on 3
 option-on 4
 return
 @3
-shy: That's okay, I understand...wait -what? You said yes? No one's ever said yes before. Wow, okay cool, I uh...that sounds fun! I know a cool coffee shop where we can sit in the back and no one will bother us!
-ego: Sounds awesome! Let's go!
+shy: That's okay, I understand, no trouble.
+shy: Wait, what? You said yes? 
+shy: No one's ever said yes before! Wow, okay cool, I uh...that sounds fun! 
+shy: I know a cool coffee shop where we can sit in the back, and no one will bother us!
+ego: Sounds great. Let's go.
 goto-dialog 101
 @4
-shy: That's okay! It was nice to meet you. Thanks for talking to me, I actually had fun tonight.
+shy: That's okay! It was nice to meet you. 
+shy: Thanks for talking to me, I actually had fun tonight. Which like never happens.
 shy: See ya!
-ego: Bye
+ego: Goodbye.
 	cShy.ChangeRoom(1);
 stop
 ]]></Script>
                     <DialogOptions>
                       <DialogOption>
                         <ID>1</ID>
-                        <Text xml:space="preserve">Hey, it's you</Text>
+                        <Text xml:space="preserve">Hey, it's you.</Text>
                         <Show>True</Show>
                         <Say>True</Say>
                       </DialogOption>
@@ -4936,13 +4949,13 @@ stop
                       </DialogOption>
                       <DialogOption>
                         <ID>3</ID>
-                        <Text xml:space="preserve">That sounds wonderful. We can go somewhere quiet where you're comfortable.</Text>
+                        <Text xml:space="preserve">That sounds wonderful.</Text>
                         <Show>False</Show>
                         <Say>True</Say>
                       </DialogOption>
                       <DialogOption>
                         <ID>4</ID>
-                        <Text xml:space="preserve">I actually have other plans, but thanks for the offer.</Text>
+                        <Text xml:space="preserve">I can't, but thanks for the offer.</Text>
                         <Show>False</Show>
                         <Say>True</Say>
                       </DialogOption>
@@ -4958,7 +4971,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-ego: Hey there!
+ego: Hello there.
 narrator: The person doesn't reply.
 ego: .....
 return
@@ -4984,7 +4997,7 @@ goto-dialog 77
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">HEY! Are you ignoring me? Say something!</Text>
+                    <Text xml:space="preserve">HEY! Are you ignoring me?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -4998,7 +5011,7 @@ goto-dialog 77
 @S  // Dialog startup entry point
 	modifyscore(4,1);
 	cEgo.Say("These things are always so awkward, aren't they? I'm %s, nice to meet you.", playerName);
-shy: Oh um...hi.
+shy: Oh, um...hi.
 return
 @1
 goto-dialog 66
@@ -5015,7 +5028,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">You're kind of weird...</Text>
+                    <Text xml:space="preserve">You're kind of...weird...</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5033,7 +5046,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">So...do you like the food here? Wruce Bayne really went all out on the appetizers.</Text>
+                    <Text xml:space="preserve">So...do you like the food here?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5062,11 +5075,14 @@ goto-dialog 67
 stop
 @3
 	modifyscore(4,-1);
-shy: Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me.
+shy: Oh yeah, that's...great. Look, I'd rather be alone right now. 
+shy: Thanks for trying to talk to me.
 goto-dialog 69
 @4
 	modifyscore(4,-1);
-shy: I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?
+shy: I think I'd rather just be alone right now. 
+shy: Sorry, it's just a lot for me to interact with people. 
+shy: Maybe I'll catch up with you a little later, though?
 goto-dialog 69
 @5
 	endConversation(4);
@@ -5075,25 +5091,25 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Parties aren't really your thing then, are they? Do you like more low-key stuff?</Text>
+                    <Text xml:space="preserve">Do you dislike parties?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I'm so sorry. Do you want to go somewhere quieter?</Text>
+                    <Text xml:space="preserve">Would you rather go somewhere quiet?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">That's cool, we can talk about me, I'm fascinating. I can uh...fly! And I have super strength.</Text>
+                    <Text xml:space="preserve">Okay, let's talk about me.I can, uh...fly! And I have super strength.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">Well is there anything you feel like talking about? Or should I not waste my time?</Text>
+                    <Text xml:space="preserve">Is there anything you do wanna talk about? Like your alias, maybe?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5125,13 +5141,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">They stress me out too. Wanna stand here awkwardly and not talk to anyone and just pretend we're home in our pajamas?</Text>
+                    <Text xml:space="preserve">Want to stand here awkwardly and just pretend we're home in our pajamas?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">That's weird, why would a party stress you out? Free food, free alcohol! This is awesome! Let's go dance!</Text>
+                    <Text xml:space="preserve">That's weird. Let's go dance!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5150,18 +5166,21 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(4,1);
-shy: Hah, that sounds really nice, actually. I feel like I probably should have stayed in bed.
+shy: That sounds really nice, actually. I feel like I should have stayed in bed.
 return
 @1
 	shyDialogAprovalCheck();
 stop
 @2
 	modifyscore(4,-1);
-shy: Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me.
+shy: Oh yeah, that's...great. Look, I'd rather be alone right now. 
+shy: Thanks for trying to talk to me.
 goto-dialog 69
 @3
 	modifyscore(4,-1);
-shy: I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?
+shy: I think I'd rather just be alone right now. 
+shy: Sorry, it's just a lot for me to interact with people. 
+shy: Maybe I'll catch up with you a little later, though?
 goto-dialog 69
 @4
 	endConversation(4);
@@ -5170,19 +5189,19 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Hmm. Do you want to go somewhere quieter?</Text>
+                    <Text xml:space="preserve">Do you want to go somewhere quieter?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Yeah but then you wouldn't have gotten to meet me, and I'm fascinating. I uh...I can fly and I have super strength. Now those are cool superpowers.</Text>
+                    <Text xml:space="preserve">Okay, let's talk about me. I uh...I can fly. And I have super strength!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Sounds lame. Let's talk about something else.</Text>
+                    <Text xml:space="preserve">Sounds lame.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5216,7 +5235,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">All right, I'll see you around. Enjoy the rest of the party.</Text>
+                    <Text xml:space="preserve">All right, see you around.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5241,7 +5260,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 shy: I'm okay, but thank you. It's really nice to meet someone who understands.
-shy: I think I just need to decompress for a little. But maybe I'll catch up with you later?
+shy: I think I just need to decompress for a little while. But maybe I'll catch up with you later?
 return
 @1
 	modifyscore(4,1);
@@ -5258,7 +5277,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">All right, I'll see you around. Enjoy the rest of the party.</Text>
+                    <Text xml:space="preserve">All right, I'll see you around.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5282,7 +5301,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-shy: Oh uh...no, no thank you. I'm good.
+shy: Oh uh...no, no thank you. I'm fine.
 return
 @1
 	modifyscore(4,1);
@@ -5299,7 +5318,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Oh...okay. Sorry if I offended you or anything.</Text>
+                    <Text xml:space="preserve">Sorry if I offended you.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5324,18 +5343,21 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(4,-1);
-shy: "No thanks. I'm not much of a dancer."
+shy: No, thanks. I'm not much of a dancer. More of a stand nearby-er.
 return
 @1
 	shyDialogAprovalCheck();
 stop
 @2
 	modifyscore(4,-1);
-shy: "Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me."
+shy: Oh, yeah, that's...great. 
+shy: Look, I'd rather be alone right now. Thanks for trying to talk to me.
 goto-dialog 69
 @3
 	modifyscore(4,-1);
-shy: "I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?"
+shy: I think I'd rather just be alone right now. 
+shy: Sorry, it's just a lot for me to interact with people. 
+shy: Maybe I'll catch up with you a little later, though?
 goto-dialog 69
 @4
 	endConversation(4);
@@ -5344,19 +5366,19 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Oh, sorry. Do you want to go somewhere quieter?</Text>
+                    <Text xml:space="preserve">Do you want to go somewhere quieter?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">We can talk about me, if you want. I'm fascinating. I uh...I can fly and I have super strength. Now those are cool superpowers.</Text>
+                    <Text xml:space="preserve">Let's talk about me. I uh...I can fly. And I have super strength!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Okay, whatever. What do you want to do?</Text>
+                    <Text xml:space="preserve">Okay, whatever.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5375,7 +5397,8 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(4,-1);
-shy: I'd really rather not talk about it. It just...it makes it difficult for me to be around other people. But other people want to be around me. It's complicated.
+shy: I'd really rather not talk about it. It just...it makes it difficult for me to be around other people. 
+shy: But other people want to be around me. It's complicated.
 return
 @1
 goto-dialog 67
@@ -5384,11 +5407,14 @@ goto-dialog 67
 stop
 @3
 	modifyscore(4,-1);
-shy: Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me.
+shy: Oh yeah, that's...great. 
+shy: Look, I'd rather be alone right now. Thanks for trying to talk to me.
 goto-dialog 69
 @4
 	modifyscore(4,-1);
-shy: I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?
+shy: I think I'd rather just be alone right now. 
+shy: Sorry, it's just a lot for me to interact with people. 
+shy: Maybe I'll catch up with you a little later, though?
 goto-dialog 69
 @5
 	endConversation(4);
@@ -5397,25 +5423,25 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">That sounds terrible. Parties aren't really your thing then, are they?</Text>
+                    <Text xml:space="preserve">Parties aren't really your thing, are they?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I'm so sorry. Do you want to go somewhere quieter?</Text>
+                    <Text xml:space="preserve">Do you want to go somewhere quieter?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">That sounds pretty lame. I uh...I can fly and I have super strength. Now those are cool superpowers.</Text>
+                    <Text xml:space="preserve">That sounds pretty lame. I uh...I can fly and I have super strength.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">Okay, whatever. We don't have to talk about it. What do you want to talk about?</Text>
+                    <Text xml:space="preserve">Okay. What do you want to talk about?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5445,11 +5471,13 @@ goto-dialog 67
 stop
 @3
 	modifyscore(4,-1);
-shy: Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me.
+shy: Oh yeah, that's...great. 
+shy: Look, I'd rather be alone right now. Thanks for trying to talk to me.
 goto-dialog 69
 @4
 	modifyscore(4,-1);
-shy: I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?
+shy: I think I'd rather just be alone right now. 
+shy: Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later, though?
 goto-dialog 69
 @5
 	endConversation(4);
@@ -5458,25 +5486,25 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Nice to meet you! I'm guessing parties aren't really your thing then, are they?</Text>
+                    <Text xml:space="preserve">I'm guessing parties aren't really your thing, are they?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Hey Erisymum, do you want to go somewhere quieter?</Text>
+                    <Text xml:space="preserve">Do you want to go somewhere quieter?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Weird name. And whatever, your powers sounds pretty lame. I uh...I can fly and I have super strength. Now those are cool superpowers.</Text>
+                    <Text xml:space="preserve">Weird name.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">So uh, anything you feel like talking about?</Text>
+                    <Text xml:space="preserve">So, uh, anything you feel like talking about?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5495,9 +5523,9 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(4,1);
-shy: It's actually pretty good. At least the desert table is.
-shy: I've been trying to stuff my face to keep from talking to people.
-shy: I'm Erisymum by the way.
+shy: It's actually pretty good. At least, the dessert table is.
+shy: If my mouth is full, I don't have to talk to anyone.
+shy: I'm Erisymum, by the way.
 return
 @1
 goto-dialog 67
@@ -5507,11 +5535,13 @@ goto-dialog 67
 stop
 @3
 	modifyscore(4,-1);
-shy: Oh yeah, that's...great. Look, I'd rather be alone right now. Thanks for trying to talk to me.
+shy: Oh yeah, that's...great. 
+shy: Look, I'd rather be alone right now. Thanks for trying to talk to me.
 goto-dialog 69
 @4
 	modifyscore(4,-1);
-shy: I think I'd rather just be alone right now. Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later though?
+shy: I think I'd rather just be alone right now. 
+shy: Sorry, it's just a lot for me to interact with people. Maybe I'll catch up with you a little later ,though?
 goto-dialog 69
 @5
 	endConversation(4);
@@ -5520,25 +5550,25 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Nice to meet you! I'm guessing parties aren't really your thing then, are they?</Text>
+                    <Text xml:space="preserve">I'm guessing parties aren't really your thing, are they?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Hey Erisymum, do you want to go somewhere quieter?</Text>
+                    <Text xml:space="preserve">Do you want to go somewhere quieter?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Weird name. And whatever, your powers sounds pretty lame. I uh...I can fly and I have super strength. Now those are cool superpowers</Text>
+                    <Text xml:space="preserve">Weird name. And your powers sounds pretty lame.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">So uh, anything you feel like talking about?</Text>
+                    <Text xml:space="preserve">So, uh, anything you feel like talking about?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5557,7 +5587,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(4,-1);
-shy: Oh um...hi.
+shy: Oh, um...hi.
 return
 @1
 goto-dialog 66
@@ -5574,7 +5604,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">You're kind of weird...</Text>
+                    <Text xml:space="preserve">You're kind of weird.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5586,13 +5616,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Man, these events can be really overwhelming. There's so many people.</Text>
+                    <Text xml:space="preserve">Man, these events can be really overwhelming.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">So...do you like the food here? Wruce Bayne really went all out on the appetizers.</Text>
+                    <Text xml:space="preserve">So...do you like the food here?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5629,19 +5659,19 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Oh, I'm so sorry! I didn't realize.</Text>
+                    <Text xml:space="preserve">Oh, I'm sorry! I didn't realize.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Well that's super rude. I'll leave you to your silence then.</Text>
+                    <Text xml:space="preserve">Well, that's super rude. Bye.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">What's your nametag say? Aren't you going to introduce yourself?</Text>
+                    <Text xml:space="preserve">What's your nametag say?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5660,7 +5690,8 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(4,1);
-shy: It's okay. Sorry I just...I'm not good at things like this. Talking to people is hard for me. Especially with my powers. This is just a lot.
+shy: It's okay. 
+shy: Sorry, I just...I'm not good at things like this. Talking to people is hard for me. Especially with my powers.
 return
 @1
 goto-dialog 66
@@ -5677,25 +5708,25 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Oh... That's weird.</Text>
+                    <Text xml:space="preserve">That's weird.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Why? What are your powers?</Text>
+                    <Text xml:space="preserve">What are your powers?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">I totally understand. These events can be really overwhelming.</Text>
+                    <Text xml:space="preserve">These events can be really overwhelming.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">That's okay, we can talk about something easy. How about the food here, huh?</Text>
+                    <Text xml:space="preserve">That's okay. How about the food here, huh?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5714,7 +5745,8 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(4,-1);
-shy: Could you not? I don't really like it when people get that close to me. I need my personal space. This is...difficult for me, with my powers.
+shy: Could you not? I don't really like it when people get that close to me. I need my personal space. 
+shy: This is...difficult for me, with my powers.
 return
 @1
 goto-dialog 66
@@ -5743,13 +5775,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Sorry! I totally understand. These events can be really overwhelming.</Text>
+                    <Text xml:space="preserve">Sorry! These events can be really overwhelming.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
-                    <Text xml:space="preserve">Oh, sorry about that! That's okay, we can talk about something easy. How about the food here, huh?</Text>
+                    <Text xml:space="preserve">That's okay. How about the food here, huh?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5785,19 +5817,19 @@ goto-dialog 87
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Are those horns real, or are they part of your costume?</Text>
+                    <Text xml:space="preserve">Are those horns real?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">So... you're here 'cause you're pretty horny, huh?</Text>
+                    <Text xml:space="preserve">So...have you heard any jokes about being horny tonight?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">So, are you on a team with Wruce?</Text>
+                    <Text xml:space="preserve">Are you on a superhero team?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5810,7 +5842,7 @@ goto-dialog 87
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,-1);
-alien: Excuse me? Not everyone looks the same, you know.
+alien: Excuse me? Who asks something like that?
 return
 @1
 goto-dialog 81
@@ -5818,26 +5850,26 @@ goto-dialog 81
 goto-dialog 82
 @3
 	modifyscore(5,-1);
-alien: Yeah... bye.
+alien: Wow. No. Goodbye.
 	endConversation(5);
 stop
 ]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I'd love to see more of you…if you know what I mean…</Text>
+                    <Text xml:space="preserve">I'd love to see more of you, if you know what I mean.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Oh I'm sorry! I was wondering because I think they’re really cool. Much nicer than anything on my face</Text>
+                    <Text xml:space="preserve">Sorry! I think they're really cool. Much nicer than anything on my face.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Um…okay…I was just asking…</Text>
+                    <Text xml:space="preserve">I was just asking.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5850,7 +5882,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,-1);
-alien: Ugh, you think you’re really clever, don’t you asshole? I don’t want to talk to you anymore.
+alien: Wow, you think you're clever, don't you, asshole? I don't want to talk to you anymore.
 	endConversation(5);
 stop
 ]]></Script>
@@ -5863,8 +5895,8 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,1);
-alien: Thanks. And your face isn't terrible; all Earth people are plain like that.
-ego: So you’re not from Earth. What planet are you from?
+alien: Thanks. And your face isn't terrible. All Earth people are plain like that.
+ego: All Earth people? What planet are you from?
 	modifyscore(5,1);
 alien: I'm from the planet Stredater.
 return
@@ -5880,7 +5912,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">That’s so cool! I’d love to hear more about it!</Text>
+                    <Text xml:space="preserve">I'd love to hear more about it!</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5905,11 +5937,12 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,-1);
-alien: Wow, real creative, asshole.
+alien: Wow, real creative.
+alien: Ass.
 return
 @1
 	modifyscore(5,-2);
-alien: Ugh, you think you’re really clever, don’t you asshole? I don’t want to talk to you anymore.
+alien: Ugh, you think you're really clever, don't you, asshole? I don't want to talk to you anymore.
 	endConversation(5);
 stop
 @2
@@ -5930,7 +5963,7 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I'm sorry. That was a bad line.</Text>
+                    <Text xml:space="preserve">I'm sorry. That was bad.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5955,7 +5988,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,1);
-alien: Well at least you apologized.
+alien: At least you apologized.
 return
 @1
 goto-dialog 85
@@ -5975,13 +6008,13 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">I'd love to see more of you…if you know what I mean…</Text>
+                    <Text xml:space="preserve">I'd love to see more of you, if you know what I mean.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">I shoulg go.</Text>
+                    <Text xml:space="preserve">I should go.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -5994,7 +6027,8 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,1);
-alien: Sure. Maybe we can meet up later and you could get me a coffee?
+alien: Sure. Maybe we can meet up later.
+alien: I very much enjoy coffee. We could drink it.
 	endConversation(5);
 stop
 ]]></Script>
@@ -6021,13 +6055,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I'm sorry. You're right, it was rude of me to say that.</Text>
+                    <Text xml:space="preserve">You're right. It was rude of me to say that.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">"I'd love to see more of you... if you know what I mean...</Text>
+                    <Text xml:space="preserve">I'd love to see more of you, if you know what I mean.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -6046,13 +6080,15 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,1);
-alien: No, but we’ve run into each other a few times. They know I don’t have very many friends on this planet, so they invited me.
+alien: No, but I know Wruce Bayne. He knows I don't have many friends on this planet, so he invited me.
 return
 @1
 goto-dialog 88
 @2
 	modifyscore(5,2);
-alien: Wow thanks! I'm having a great time talking to you too, would you maybe want to get together later?
+alien: Thank you.
+alien: You know, I'm having a great time talking to you.
+alien: Would you maybe want to get together later? I very much enjoy coffee. We could drink it together.
 @3
 goto-dialog 89
 @4
@@ -6063,13 +6099,13 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">So what planet are you from?</Text>
+                    <Text xml:space="preserve">So, what planet are you from?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Text xml:space="preserve">Well I'm glad they did. I'm having a great time talking to you!</Text>
+                    <Text xml:space="preserve">Well I'm glad they did.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -6107,7 +6143,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">That's so cool! I'd love to hear more about it!</Text>
+                    <Text xml:space="preserve">I'd love to hear more about that.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -6132,7 +6168,7 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,-1);
-alien: Ugh. Really? A pickup line?
+alien: Ugh, really? A pickup line?
 return
 @1
 goto-dialog 81
@@ -6183,19 +6219,19 @@ alien: At least you're aware of it.
 return
 @1
 	modifyscore(5,1);
-alien: No, it hasn’t. Maybe we could meet up later and you could get me a coffee?
+alien: No, it hasn't. Maybe we could meet up later? I very much enjoy coffee. We could drink some.
 	endConversation(5);
 stop
 @2
 	modifyscore(5,-1);
-alien: Wow, that one was even worse. I think this conversation is over.
+alien: Wow, that was even worse. I think this conversation is over.
 	endConversation(5);
 stop
 	]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I hope this hasn't ruined my chances of talking to you more.</Text>
+                    <Text xml:space="preserve">I hope this hasn't ruined my chance of talking to you more.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -6214,13 +6250,13 @@ stop
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 	modifyscore(5,-1);
-alien: I didn’t, actually.
+alien: I didn't, actually.
 return
 @1
 goto-dialog 85
 @2
 	modifyscore(5,-1);
-alien: They do. I don't like them there either. I don't think this is a good match.
+alien: They're bad in any language. Goodbye.
 	endConversation(5);
 stop
 @3
@@ -6231,7 +6267,7 @@ stop
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Text xml:space="preserve">I'm sorry. Will you let me redeem myself?</Text>
+                    <Text xml:space="preserve">Will you let me redeem myself?</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -6255,7 +6291,7 @@ stop
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-alien: So do you still want to head out together? Spend some more time together?
+alien: So, do you still want to head out together? Spend some more time together? Drink a coffee?
 return
 @1
 goto-dialog 101
@@ -6288,8 +6324,8 @@ stop
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-narrator: You reached the ending! You don't have a ride home, and can try to hook up with someone you met today.
-narrator: Who will you approach to ask for a ride?
+narrator: The evening is over. You can approach one of the superheroes you met, and try to continue your evening. Or, you could return home alone.
+narrator: Any last words for the superheroes heading for the door?
 return
 @1
 stop
@@ -6354,8 +6390,8 @@ ego: I did it.
 ego: I got exactly what I came for.
 ego: Not a date, of course. That would be unethical for a reporter. No, I got something better.
 ego: The recorder in my pocket picked up every scrap of conversation. I've got hours of interviews with the most secretive people on the planet.
-ego: You've heard of "Interview with the Vampire", right?
-ego: "Dates With Superheroes... And One Creepy Villain Guy" is going to be a bestseller.
+ego: You've heard of "Interview With The Vampire", right?
+ego: "Date With The Superheroes... And One Creepy Villain Guy" is going to be way better. A bestseller.
 ego: Time to head home. And start writing.
 return
 @1
@@ -6377,9 +6413,8 @@ stop]]></Script>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-ego: Well.
-ego: This definitely isn't what I expected. It's not what I came for.
-ego: I came here hoping to talk to superheroes. I wanted a scoop, maybe even enough for a bestseller.
+ego: Well, this definitely isn't what I expected. It's not what I came to this party for.
+ego: I came here hoping to talk to superheroes. Record all of their conversations. I wanted a scoop, maybe even enough for a bestseller.
 ego: But, you know what?
 ego: I think I found something better.
 return
@@ -6545,7 +6580,7 @@ stop
         <Name>fntTiny</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\Game Fonts\FONT.010</SourceFilename>
+        <SourceFilename xml:space="preserve">C:\Users\BjÃ¶rn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\Game Fonts\FONT.010</SourceFilename>
       </Font>
       <Font>
         <ID>3</ID>
@@ -6553,7 +6588,7 @@ stop
         <Name>fntFiles</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\Game Fonts\agsfnt0.ttf</SourceFilename>
+        <SourceFilename xml:space="preserve">C:\Users\BjÃ¶rn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\Game Fonts\agsfnt0.ttf</SourceFilename>
       </Font>
       <Font>
         <ID>4</ID>
@@ -8553,7 +8588,7 @@ stop
             </SubFolders>
             <AudioClips>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\LostCraftHowl.wav</SourceFileName>
+                <SourceFileName xml:space="preserve">C:\Users\BjÃ¶rn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\LostCraftHowl.wav</SourceFileName>
                 <ScriptName>aLostCraftHowl</ScriptName>
                 <Index>2</Index>
                 <Type>3</Type>
@@ -8565,7 +8600,7 @@ stop
                 <FileLastModifiedDate>2012-02-10 13:06:18Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\RadioNoise.WAV</SourceFileName>
+                <SourceFileName xml:space="preserve">C:\Users\BjÃ¶rn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\RadioNoise.WAV</SourceFileName>
                 <ScriptName>aRadioNoise</ScriptName>
                 <Index>3</Index>
                 <Type>3</Type>
