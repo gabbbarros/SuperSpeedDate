@@ -6,5 +6,6 @@ import function PlayDong();
 import function askNameInput();
 import function updateIntro();
 import function modifyscore(int characterID, int score);
-import function checkIfButlerIsOn();
+import function checkIfButlerIsOn(int option);
 import function shyDialogAprovalCheck();
+import function endConversation(int character);
